@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Train-Activity-Basic</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Anytime Is Train Time</a>
+    </div>
+  </div>
+</nav>
+
+<div><br></div>
+
+<div id="panel-train">
+	<div class="panel panel-default" >
+	  <!-- Default panel contents -->
+	  <div class="panel-heading">Panel heading</div>
+
+	  <!-- Table -->
+	  <table class="table">
+	    <thead>
+	    	<tr><td>Train Name</td><td>Destination</td><td>Frequency (min)</td><td>Next Arrival</td><td>Minutes Away</td></tr>
+	    </thead>
+
+		<tbody>
+			<tr><td>hello</td><td>hello1</td><td>hello2</td><td>hello3</td><td>hello4</td></tr>
+		</tbody>
+
+	  </table>
+	</div>
+</div>
+
+<div id="panel-form">
+	<div class="panel panel-default">
+		<div class="panel-heading">Add Train
+		</div>
+	
+	<form role="form" style="padding: 10px">
+	  	<div class="form-group">
+    	<label for="trainname-input">Train Name</label>
+    	<input type="text" class="form-control" id="trainname-input">
+  		</div>
+
+	  	<div class="form-group">
+    	<label for="destination-input">Destination</label>
+    	<input type="text" class="form-control" id="destination-input">
+  		</div>
+
+  		<div class="form-group">
+    	<label for="traintime-input">First Train Time (HH:mm - military time)</label>
+    	<input type="time" class="form-control" id="traintime-input">
+  		</div>
+
+  		<div class="form-group">
+    	<label for="frequency-input">Frequency (min)</label>
+    	<input type="number" class="form-control" id="frequency-input">
+  		</div>
+
+  		<div>
+  		<button type="submit" class="btn btn-primary">Submit</button>
+  		</div>
+	</form>
+
+	</div>
+
+</div>
+
+</body>
+
+</html>

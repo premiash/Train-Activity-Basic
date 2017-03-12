@@ -32,12 +32,13 @@
   	var firstTime = $("#firsttraintime-input").val().trim();
 
   	// Code in the logic for storing and retrieving the most recent user.
-    database.ref().push({
+    database.ref("/trains").push({
       Name: trainName,
       Destination: trainDestination,
       Frequency: trainFrequency,
       FirstTrainTime: firstTime,
-      dateAdded: firebase.database.ServerValue.TIMESTAMP
+      Test: "Hello"
+      //dateAdded: firebase.database.ServerValue.TIMESTAMP
       })
 
 	  // Clears all of the text-boxes
@@ -49,10 +50,11 @@
 	  return false;
 
 
-
   });
 
-  database.ref().on("child_added", function(childSnapshot, parentKey) {
+  //Create Firebase event for adding employee to the database and a row 
+  //in the html when a user adds an entry
+  database.ref("/trains").on("child_added", function(childSnapshot, parentKey) {
     
     console.log(childSnapshot.val());
 
@@ -74,6 +76,7 @@
     // Current Time
     var currentTime = moment();
     console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+    $('#panel-head').html("Train Schedule" + " (Current Time:  " + moment(currentTime).format("hh:mm a") + ")");
 
     // Difference between the times
     var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
@@ -98,5 +101,5 @@
 	});
 
 
-
+//if current time = 12:00 am, then 
 
